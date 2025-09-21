@@ -3,11 +3,11 @@ window.tailwind.config = {
 	theme: {
 		extend: {
 			colors: {
-				'carbon': '#2d3748',
-				'carbon-light': '#4a5568',
-				'carbon-dark': '#1a202c',
-				'accent': '#38b2ac',
-				'accent-light': '#4fd1c7'
+				'carbon': '#1f2937',
+				'carbon-light': '#374151',
+				'carbon-dark': '#0b1220',
+				'accent': '#06b6d4',
+				'accent-light': '#22d3ee'
 			}
 		}
 	}
