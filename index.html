@@ -11,23 +11,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
     
+    <script src="/assets/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'carbon': '#2d3748',
-                        'carbon-light': '#4a5568',
-                        'carbon-dark': '#1a202c',
-                        'accent': '#38b2ac',
-                        'accent-light': '#4fd1c7'
-                    }
-                }
-            }
-        }
-    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Navigation -->
@@ -44,10 +31,10 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                        <a href="#announcements" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Announcements</a>
-                        <a href="#hackathon" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Hackathon Info</a>
-                        <a href="#contact" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        <a href="#home" class="nav-link text-carbon px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#announcements" class="nav-link text-carbon px-3 py-2 rounded-md text-sm font-medium">Announcements</a>
+                        <a href="#hackathon" class="nav-link text-carbon px-3 py-2 rounded-md text-sm font-medium">Hackathon Info</a>
+                        <a href="#contact" class="nav-link text-carbon px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -59,10 +46,10 @@
             <!-- Mobile menu -->
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-                    <a href="#home" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                    <a href="#announcements" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Announcements</a>
-                    <a href="#hackathon" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Hackathon Info</a>
-                    <a href="#contact" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                    <a href="#home" class="nav-link text-carbon block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="#announcements" class="nav-link text-carbon block px-3 py-2 rounded-md text-base font-medium">Announcements</a>
+                    <a href="#hackathon" class="nav-link text-carbon block px-3 py-2 rounded-md text-base font-medium">Hackathon Info</a>
+                    <a href="#contact" class="nav-link text-carbon block px-3 py-2 rounded-md text-base font-medium">Contact</a>
                 </div>
             </div>
         </div>
@@ -79,11 +66,11 @@
                 Build amazing projects, learn new technologies, and connect with fellow developers.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#announcements" class="bg-accent hover:bg-accent-light text-white font-bold py-3 px-8 rounded-lg transition-colors transform hover:scale-105">
+                <a href="#announcements" class="btn btn-primary">
                     <i class="fas fa-bullhorn mr-2"></i>
                     View Announcements
                 </a>
-                <a href="#hackathon" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-carbon font-bold py-3 px-8 rounded-lg transition-colors">
+                <a href="#hackathon" class="btn btn-outline">
                     <i class="fas fa-info-circle mr-2"></i>
                     Learn More
                 </a>
@@ -95,7 +82,7 @@
     <section id="announcements" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl font-bold text-carbon mb-4">
+                <h3 class="text-3xl md:text-4xl section-title mb-4">
                     <i class="fas fa-bullhorn text-accent mr-3"></i>
                     Latest Announcements
                 </h3>
@@ -106,7 +93,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Announcement Card 1 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+                <div class="card card-accent">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-accent text-white rounded-full p-2 mr-3">
@@ -119,14 +106,14 @@
                             Registration for the Carbon County Hackathon is now officially open! 
                             Secure your spot early and get ready for an amazing coding experience.
                         </p>
-                        <a href="#" class="text-accent hover:text-accent-light font-medium">
+                        <a href="#" class="link text-accent hover:text-accent-light font-medium">
                             Read More <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Announcement Card 2 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+                <div class="card card-accent">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-accent text-white rounded-full p-2 mr-3">
@@ -139,14 +126,14 @@
                             We're excited to announce our prize pool of $10,000! 
                             Winners will be selected across multiple categories including innovation, design, and technical excellence.
                         </p>
-                        <a href="#" class="text-accent hover:text-accent-light font-medium">
+                        <a href="#" class="link text-accent hover:text-accent-light font-medium">
                             Read More <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Announcement Card 3 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+                <div class="card card-accent">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-accent text-white rounded-full p-2 mr-3">
@@ -159,14 +146,14 @@
                             Join us for our team formation event on January 5th! 
                             Meet other participants, form teams, and start brainstorming your hackathon project ideas.
                         </p>
-                        <a href="#" class="text-accent hover:text-accent-light font-medium">
+                        <a href="#" class="link text-accent hover:text-accent-light font-medium">
                             Read More <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Announcement Card 4 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+                <div class="card card-accent">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-accent text-white rounded-full p-2 mr-3">
@@ -179,14 +166,14 @@
                             Check out our recommended tech stack and resources! 
                             We've compiled a list of tools, frameworks, and APIs to help you build amazing projects.
                         </p>
-                        <a href="#" class="text-accent hover:text-accent-light font-medium">
+                        <a href="#" class="link text-accent hover:text-accent-light font-medium">
                             Read More <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Announcement Card 5 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+                <div class="card card-accent">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-accent text-white rounded-full p-2 mr-3">
@@ -199,14 +186,14 @@
                             The hackathon will be held at the Carbon County Community Center. 
                             We'll provide all necessary equipment, food, and beverages throughout the event.
                         </p>
-                        <a href="#" class="text-accent hover:text-accent-light font-medium">
+                        <a href="#" class="link text-accent hover:text-accent-light font-medium">
                             Read More <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Announcement Card 6 -->
-                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
+                <div class="card card-accent">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-accent text-white rounded-full p-2 mr-3">
@@ -219,7 +206,7 @@
                             The official hackathon schedule is now available! 
                             Plan your weekend and make sure you don't miss any important sessions or deadlines.
                         </p>
-                        <a href="#" class="text-accent hover:text-accent-light font-medium">
+                        <a href="#" class="link text-accent hover:text-accent-light font-medium">
                             Read More <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
@@ -232,7 +219,7 @@
     <section id="hackathon" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl font-bold text-carbon mb-4">
+                <h3 class="text-3xl md:text-4xl section-title mb-4">
                     <i class="fas fa-info-circle text-accent mr-3"></i>
                     Hackathon Information
                 </h3>
@@ -329,7 +316,7 @@
                     <p class="text-lg mb-6 opacity-90">
                         Don't miss out on this amazing opportunity to learn, create, and compete!
                     </p>
-                    <a href="#" class="bg-white text-accent hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors transform hover:scale-105 inline-block">
+                    <a href="#" class="btn bg-white text-accent hover:bg-gray-100 inline-block">
                         <i class="fas fa-user-plus mr-2"></i>
                         Register Now
                     </a>
@@ -351,16 +338,16 @@
                         Bringing together developers, designers, and innovators for an exciting 48-hour coding competition.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+                        <a href="#" class="link text-gray-300 hover:text-accent">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+                        <a href="#" class="link text-gray-300 hover:text-accent">
                             <i class="fab fa-facebook text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+                        <a href="#" class="link text-gray-300 hover:text-accent">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+                        <a href="#" class="link text-gray-300 hover:text-accent">
                             <i class="fab fa-github text-xl"></i>
                         </a>
                     </div>
@@ -368,11 +355,11 @@
                 <div>
                     <h5 class="text-xl font-bold mb-4">Quick Links</h5>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-accent transition-colors">Home</a></li>
-                        <li><a href="#announcements" class="text-gray-300 hover:text-accent transition-colors">Announcements</a></li>
-                        <li><a href="#hackathon" class="text-gray-300 hover:text-accent transition-colors">Hackathon Info</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Registration</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Rules & Guidelines</a></li>
+                        <li><a href="#home" class="link text-gray-300 hover:text-accent">Home</a></li>
+                        <li><a href="#announcements" class="link text-gray-300 hover:text-accent">Announcements</a></li>
+                        <li><a href="#hackathon" class="link text-gray-300 hover:text-accent">Hackathon Info</a></li>
+                        <li><a href="#" class="link text-gray-300 hover:text-accent">Registration</a></li>
+                        <li><a href="#" class="link text-gray-300 hover:text-accent">Rules & Guidelines</a></li>
                     </ul>
                 </div>
                 <div>
