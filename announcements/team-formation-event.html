@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement - Team Formation Event</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.svg">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carbon': '#2d3748',
+                        'carbon-light': '#4a5568',
+                        'carbon-dark': '#1a202c',
+                        'accent': '#38b2ac',
+                        'accent-light': '#4fd1c7'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="../index.html#home" class="text-2xl font-bold text-carbon">
+                            <i class="fas fa-code text-accent mr-2"></i>
+                            Carbon County Hackathon
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html#home" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="../index.html#announcements" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Announcements</a>
+                        <a href="../index.html#hackathon" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Hackathon Info</a>
+                        <a href="../index.html#contact" class="text-carbon hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-carbon hover:text-accent focus:outline-none focus:text-accent" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+                    <a href="../index.html#home" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="../index.html#announcements" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Announcements</a>
+                    <a href="../index.html#hackathon" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Hackathon Info</a>
+                    <a href="../index.html#contact" class="text-carbon hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-gradient-to-br from-carbon to-carbon-dark text-white py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center text-gray-200 text-sm mb-4">
+                <a href="../index.html#announcements" class="hover:text-white">Announcements</a>
+                <span class="mx-2">/</span>
+                <span>Team Formation Event</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold">Team Formation Event</h1>
+            <div class="mt-4 flex items-center text-gray-300">
+                <i class="fas fa-users mr-2"></i>
+                <span>December 5, 2024</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow p-6 md:p-10">
+                <p class="text-gray-700 mb-4">
+                    Join us on January 5th for a team formation and networking event. Meet other participants, share ideas, and find collaborators to bring your project to life.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    We will facilitate icebreakers and interest-based group sessions to help you connect with participants who share your goals and skills.
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 mb-6">
+                    <li>Location: Carbon County Community Center</li>
+                    <li>Time: 6:00 PM – 8:00 PM</li>
+                    <li>Light refreshments provided</li>
+                </ul>
+                <a href="../index.html#announcements" class="inline-flex items-center text-accent hover:text-accent-light font-medium">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to announcements
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-carbon text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold mb-4">
+                        <i class="fas fa-code text-accent mr-2"></i>
+                        Carbon County Hackathon
+                    </h5>
+                    <p class="text-gray-300 mb-4">
+                        Bringing together developers, designers, and innovators for an exciting 48-hour coding competition.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#home" class="text-gray-300 hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="../index.html#announcements" class="text-gray-300 hover:text-accent transition-colors">Announcements</a></li>
+                        <li><a href="../index.html#hackathon" class="text-gray-300 hover:text-accent transition-colors">Hackathon Info</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Registration</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Rules & Guidelines</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4">Contact Info</h5>
+                    <div class="space-y-2">
+                        <div class="flex items-center"><i class="fas fa-envelope text-accent mr-3"></i><span class="text-gray-300">info@carboncountyhackathon.com</span></div>
+                        <div class="flex items-center"><i class="fas fa-phone text-accent mr-3"></i><span class="text-gray-300">(555) 123-4567</span></div>
+                        <div class="flex items-start"><i class="fas fa-map-marker-alt text-accent mr-3 mt-1"></i><span class="text-gray-300">Carbon County Community Center<br>123 Main Street<br>Carbon County, State 12345</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 Carbon County Hackathon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
+

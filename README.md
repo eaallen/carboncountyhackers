@@ -23,6 +23,14 @@ A modern, responsive website for the Carbon County Hackathon announcements and i
 ```
 website/
 ├── index.html          # Main website file
+├── announcements/      # Announcement detail pages
+│   ├── index.html      # Redirect back to main announcements section
+│   ├── registration-now-open.html
+│   ├── prize-pool-announced.html
+│   ├── team-formation-event.html
+│   ├── tech-stack-guidelines.html
+│   ├── venue-details.html
+│   └── schedule-released.html
 ├── README.md          # Project documentation
 └── .gitignore         # Git ignore rules
 ```
