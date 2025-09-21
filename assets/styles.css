@@ -1,0 +1,77 @@
+:root {
+	--color-carbon: #2d3748;
+	--color-carbon-light: #4a5568;
+	--color-carbon-dark: #1a202c;
+	--color-accent: #38b2ac;
+	--color-accent-light: #4fd1c7;
+}
+
+.nav-link {
+	transition: color 150ms ease-in-out;
+}
+
+.nav-link:hover {
+	color: var(--color-accent);
+}
+
+.link {
+	color: inherit;
+	transition: color 150ms ease-in-out;
+}
+
+.link:hover {
+	color: var(--color-accent);
+}
+
+.btn {
+	font-weight: 700;
+	border-radius: 0.5rem;
+	padding: 0.75rem 2rem;
+	display: inline-block;
+	transition: transform 150ms ease, background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.btn:hover {
+	transform: scale(1.05);
+}
+
+.btn-primary {
+	background-color: var(--color-accent);
+	color: #ffffff;
+}
+
+.btn-primary:hover {
+	background-color: var(--color-accent-light);
+}
+
+.btn-outline {
+	background: transparent;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+}
+
+.btn-outline:hover {
+	background: #ffffff;
+	color: var(--color-carbon);
+}
+
+.card {
+	background: #ffffff;
+	border-radius: 0.5rem;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	transition: box-shadow 150ms ease-in-out;
+}
+
+.card:hover {
+	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+}
+
+.card-accent {
+	border-left: 4px solid var(--color-accent);
+}
+
+.section-title {
+	font-weight: 700;
+	color: var(--color-carbon);
+}
+
