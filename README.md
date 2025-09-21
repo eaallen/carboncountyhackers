@@ -80,7 +80,10 @@ Modify the event details in the "Hackathon Information" section to reflect curre
 
 ## 🌐 Deployment
 
-This website is designed to be deployed on GitHub Pages. Simply push the repository to GitHub and enable Pages in the repository settings.
+This website is deployed on GitHub Pages and is live at:
+**https://eaallen.github.io/carboncountyhackers/**
+
+To deploy updates, simply push changes to the main branch and GitHub Pages will automatically rebuild the site.
 
 ## 📞 Contact
 
