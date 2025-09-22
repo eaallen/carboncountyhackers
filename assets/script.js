@@ -33,25 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.card, .feature-item, .timeline-item, .contact-info');
-    animateElements.forEach(el => {
-        observer.observe(el);
-    });
     
     // Counter animation for hero stats
     function animateCounter(element, target, duration = 2000) {
@@ -187,30 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return emailRegex.test(email);
     }
     
-    // Add typing effect to hero title
-    function typeWriter(element, text, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        
-        type();
-    }
-    
-    // Initialize typing effect
-    const heroTitle = document.querySelector('.hero-content h1');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 80);
-        }, 1000);
-    }
     
     // Add scroll progress indicator
     function createScrollProgress() {
