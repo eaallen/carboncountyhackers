@@ -1,6 +1,6 @@
-# Carbon County Hackathon Website
+# Carbon County Hackers Website
 
-A modern, responsive website for the Carbon County Hackathon announcements and information.
+A modern, responsive website for the Carbon County Hackers announcements and information.
 
 ## 🚀 Features
 
@@ -86,7 +86,7 @@ To deploy updates, simply push changes to the main branch and GitHub Pages will 
 
 ## 📞 Contact
 
-For questions about this website or the Carbon County Hackathon, please contact:
+For questions about this website or the Carbon County Hackers, please contact:
 - Email: info@carboncountyhackathon.com
 - Phone: (555) 123-4567
 

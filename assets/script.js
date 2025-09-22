@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Console welcome message
     console.log(`
-    🚀 Welcome to Carbon County Hackathon 2025!
+    🚀 Welcome to Carbon County Hackers 2025!
     
     Built with:
     • Bootstrap 5.3.3
