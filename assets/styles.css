@@ -38,14 +38,14 @@ html {
 
 /* Navigation Styles */
 .navbar {
-    background: rgba(255, 255, 255, 0.95) !important;
+    background: rgba(255, 255, 255, 1) !important;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98) !important;
+    background: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -80,6 +80,31 @@ html {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Hamburger menu icon styling */
+.navbar-toggler {
+    border: none !important;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Ensure navbar text is always visible */
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark-color) !important;
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
 }
 
 /* Hero Section */
