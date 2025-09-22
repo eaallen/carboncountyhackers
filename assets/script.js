@@ -33,66 +33,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    
-    // Counter animation for hero stats
-    function animateCounter(element, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16);
-        
-        function updateCounter() {
-            start += increment;
-            if (start < target) {
-                element.textContent = Math.floor(start);
-                requestAnimationFrame(updateCounter);
-            } else {
-                element.textContent = target;
-            }
-        }
-        
-        updateCounter();
-    }
-    
-    // Trigger counter animation when hero section is visible
+    // Display hero stats immediately (no animation)
     const heroSection = document.querySelector('.hero-section');
-    const heroObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counters = document.querySelectorAll('.stat-item h3');
-                counters.forEach(counter => {
-                    const text = counter.textContent;
-                    if (text.includes('48')) {
-                        animateCounter(counter, 48);
-                    } else if (text.includes('10K')) {
-                        counter.textContent = '$10K';
-                    } else if (text.includes('200+')) {
-                        animateCounter(counter, 200);
-                        counter.textContent = counter.textContent + '+';
-                    }
-                });
-                heroObserver.unobserve(entry.target);
+    if (heroSection) {
+        const counters = document.querySelectorAll('.stat-item h3');
+        counters.forEach(counter => {
+            const text = counter.textContent;
+            if (text.includes('48')) {
+                counter.textContent = '48';
+            } else if (text.includes('10K')) {
+                counter.textContent = '$10K';
+            } else if (text.includes('200+')) {
+                counter.textContent = '200+';
             }
         });
-    }, { threshold: 0.5 });
-    
-    if (heroSection) {
-        heroObserver.observe(heroSection);
     }
     
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const heroSection = document.querySelector('.hero-section');
-        if (heroSection) {
-            const rate = scrolled * -0.5;
-            heroSection.style.transform = `translateY(${rate}px)`;
-        }
-    });
+    // Remove parallax effect for better readability
     
-    // Add hover effects to cards
+    // Simple hover effects to cards
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+            this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.12)';
         });
         
         card.addEventListener('mouseleave', function() {
@@ -114,24 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add loading animation to buttons
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            if (this.href && this.href.includes('#')) {
-                return; // Don't add loading for anchor links
-            }
-            
-            const originalText = this.innerHTML;
-            this.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Loading...';
-            this.disabled = true;
-            
-            setTimeout(() => {
-                this.innerHTML = originalText;
-                this.disabled = false;
-            }, 2000);
-        });
-    });
+    // Remove loading animation from buttons for better responsiveness
     
     // Newsletter subscription
     const newsletterForm = document.querySelector('.input-group');
@@ -168,8 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return emailRegex.test(email);
     }
     
-    
-    // Add scroll progress indicator
+    // Simple scroll progress indicator
     function createScrollProgress() {
         const progressBar = document.createElement('div');
         progressBar.style.cssText = `
@@ -180,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
             height: 3px;
             background: linear-gradient(90deg, #0d6efd, #0dcaf0);
             z-index: 9999;
-            transition: width 0.1s ease;
         `;
         document.body.appendChild(progressBar);
         
@@ -194,56 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     createScrollProgress();
     
-    // Add particle effect to hero section
-    function createParticles() {
-        const heroSection = document.querySelector('.hero-section');
-        if (!heroSection) return;
-        
-        const particleCount = 50;
-        
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.style.cssText = `
-                position: absolute;
-                width: 2px;
-                height: 2px;
-                background: rgba(255, 255, 255, 0.5);
-                border-radius: 50%;
-                pointer-events: none;
-                animation: float ${Math.random() * 3 + 2}s linear infinite;
-            `;
-            
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 2 + 's';
-            
-            heroSection.appendChild(particle);
-        }
-    }
-    
-    createParticles();
-    
-    // Add CSS for particle animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
+    // Remove particle effects for better readability
     
     // Console welcome message
     console.log(`
