@@ -5,18 +5,23 @@ A modern, responsive website for the Carbon County Hackathon announcements and i
 ## 🚀 Features
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI**: Built with Tailwind CSS for a clean, professional look
-- **Announcements Section**: Card-based layout for easy content management
+- **Modern UI**: Built with Bootstrap 5.3.3 for a clean, professional look
+- **Interactive Animations**: Smooth transitions, hover effects, and scroll animations
+- **Announcements Section**: Card-based layout with modern styling
 - **Event Information**: Comprehensive hackathon details and guidelines
 - **Interactive Navigation**: Smooth scrolling and mobile-friendly menu
 - **Contact Information**: Easy-to-find contact details and social links
+- **Particle Effects**: Dynamic background animations
+- **Newsletter Signup**: Interactive subscription form
 
 ## 🛠️ Technology Stack
 
 - **HTML5**: Semantic markup structure
-- **Tailwind CSS**: Utility-first CSS framework
-- **Font Awesome**: Professional icons
-- **Vanilla JavaScript**: Lightweight interactivity
+- **Bootstrap 5.3.3**: Latest version of the popular CSS framework
+- **Bootstrap Icons**: Modern icon library
+- **Google Fonts**: Inter font family for typography
+- **Vanilla JavaScript**: Lightweight interactivity with modern ES6+ features
+- **CSS3**: Custom animations and effects
 
 ## 📁 Project Structure
 
@@ -29,24 +34,18 @@ website/
 
 ## 🎨 Customization
 
-The website uses Tailwind CSS with a custom color scheme:
-- **Primary**: Carbon-themed grays (#2d3748, #4a5568, #1a202c)
-- **Accent**: Teal colors (#38b2ac, #4fd1c7)
+The website uses Bootstrap 5.3.3 with a custom color scheme and modern design:
+- **Primary**: Bootstrap blue (#0d6efd)
+- **Gradients**: Modern gradient combinations
+- **Typography**: Inter font family for clean, modern text
+- **Animations**: Smooth transitions and hover effects
 
-To customize colors, modify the Tailwind config in the HTML file:
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                'carbon': '#2d3748',
-                'carbon-light': '#4a5568',
-                'carbon-dark': '#1a202c',
-                'accent': '#38b2ac',
-                'accent-light': '#4fd1c7'
-            }
-        }
-    }
+To customize colors, modify the CSS variables in `assets/styles.css`:
+```css
+:root {
+    --primary-color: #0d6efd;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-hero: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
 }
 ```
 
@@ -57,19 +56,19 @@ tailwind.config = {
 To add new announcements, copy the announcement card structure in the announcements section:
 
 ```html
-<div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-accent">
-    <div class="p-6">
-        <div class="flex items-center mb-4">
-            <div class="bg-accent text-white rounded-full p-2 mr-3">
-                <i class="fas fa-icon-name"></i>
+<div class="col-lg-4 col-md-6">
+    <div class="card h-100 border-0 shadow-sm announcement-card">
+        <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary text-white rounded-circle p-2 me-3">
+                    <i class="bi bi-icon-name"></i>
+                </div>
+                <small class="text-muted">Date</small>
             </div>
-            <span class="text-sm text-gray-500">Date</span>
+            <h5 class="card-title fw-bold">Title</h5>
+            <p class="card-text text-muted">Description</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
         </div>
-        <h4 class="text-xl font-semibold text-carbon mb-3">Title</h4>
-        <p class="text-gray-600 mb-4">Description</p>
-        <a href="#" class="text-accent hover:text-accent-light font-medium">
-            Read More <i class="fas fa-arrow-right ml-1"></i>
-        </a>
     </div>
 </div>
 ```
